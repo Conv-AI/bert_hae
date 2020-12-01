@@ -21,26 +21,26 @@ flags.DEFINE_string('f', '', 'kernel')
 
 ## Required parameters
 flags.DEFINE_string(
-    "bert_config_file", "/mnt/scratch/chenqu/bert/uncased_L-12_H-768_A-12/bert_config.json",
+    "bert_config_file", "./uncased_L-12_H-768_A-12/bert_config.json",
     "The config json file corresponding to the pre-trained BERT model. "
     "This specifies the model architecture.")
 
-flags.DEFINE_string("vocab_file", "/mnt/scratch/chenqu/bert/uncased_L-12_H-768_A-12/vocab.txt",
+flags.DEFINE_string("vocab_file", "./uncased_L-12_H-768_A-12/vocab.txt",
                     "The vocabulary file that the BERT model was trained on.")
 
 flags.DEFINE_string(
-    "output_dir", "/mnt/scratch/chenqu/bert_out/xxx/",
+    "output_dir", "./output",
     "The output directory where the model checkpoints will be written.")
 
-flags.DEFINE_string("quac_train_file", "/mnt/scratch/chenqu/quac_original/train_v0.2.json",
+flags.DEFINE_string("quac_train_file", "./train_v0.2.json",
                     "QuAC json for training.")
 
 flags.DEFINE_string(
-    "quac_predict_file", "/mnt/scratch/chenqu/quac_original/val_v0.2.json",
+    "quac_predict_file", "./val_v0.2.json",
     "QuAC json for predictions.")
 
 flags.DEFINE_string(
-    "init_checkpoint", "/mnt/scratch/chenqu/bert/uncased_L-12_H-768_A-12/bert_model.ckpt",
+    "init_checkpoint", "./uncased_L-12_H-768_A-12/bert_model.ckpt",
     "Initial checkpoint (usually from a pre-trained BERT model).")
 
 
@@ -151,7 +151,7 @@ flags.DEFINE_bool(
 flags.DEFINE_string("dataset", 'quac', 'dataset name')
 
 flags.DEFINE_string(
-    "cache_dir", "/mnt/scratch/chenqu/bert_out/cache/",
+    "cache_dir", "./cache/",
     "we store generated features here, so that we do not need to generate them every time")
 
 flags.DEFINE_integer(
